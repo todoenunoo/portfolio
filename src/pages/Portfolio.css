@@ -1,0 +1,590 @@
+/* Portfolio Section Styles */
+.portfolio-section {
+  position: relative;
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.portfolio-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#e9ecef 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.section-header {
+  position: relative;
+  z-index: 1;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4a6cf7;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle-alt {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d2a4d;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-subtitle-alt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 25px;
+  background-color: #4a6cf7;
+  border-radius: 2px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1d2a4d;
+  margin-bottom: 20px;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #4a6cf7;
+  margin: 0 auto 20px;
+}
+
+.section-description {
+  max-width: 700px;
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Estilos para la introducción de filtros */
+.filter-intro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.filter-intro-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2a4d;
+  margin-bottom: 15px;
+}
+
+.filter-intro-description {
+  max-width: 700px;
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Filter Buttons */
+.portfolio-filter {
+  position: relative;
+  z-index: 1;
+}
+
+.filter-btn {
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card Styles */
+.project-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  position: relative;
+  background-color: white;
+}
+
+.project-card.project-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Icon Container */
+.project-icon-container {
+  position: relative;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.1);
+}
+
+.project-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Project Color Variations */
+.project-blue .project-pattern {
+  background: linear-gradient(135deg, #4a6cf7, #2d4de0);
+}
+
+.project-green .project-pattern {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.project-red .project-pattern {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.project-purple .project-pattern {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.project-orange .project-pattern {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.project-teal .project-pattern {
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+}
+
+.project-indigo .project-pattern {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+/* Icon colors */
+.project-blue .project-icon {
+  color: #4a6cf7;
+}
+
+.project-green .project-icon {
+  color: #10b981;
+}
+
+.project-red .project-icon {
+  color: #ef4444;
+}
+
+.project-purple .project-icon {
+  color: #8b5cf6;
+}
+
+.project-orange .project-icon {
+  color: #f97316;
+}
+
+.project-teal .project-icon {
+  color: #14b8a6;
+}
+
+.project-indigo .project-icon {
+  color: #6366f1;
+}
+
+/* Project Card Content */
+.project-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d2a4d;
+  margin-bottom: 10px;
+}
+
+.featured-card .project-title {
+  font-size: 22px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-card .project-description {
+  font-size: 16px;
+  -webkit-line-clamp: 4;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(74, 108, 247, 0.1);
+  color: #4a6cf7;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Tag color variations */
+.project-blue-tag {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: #4a6cf7;
+}
+
+.project-green-tag {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.project-red-tag {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.project-purple-tag {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.project-orange-tag {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+}
+
+.project-teal-tag {
+  background-color: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.project-indigo-tag {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.project-tag-more {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.featured-badge {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #4a6cf7;
+}
+
+/* Badge color variations */
+.project-blue-badge {
+  background-color: #4a6cf7;
+}
+
+.project-green-badge {
+  background-color: #10b981;
+}
+
+.project-red-badge {
+  background-color: #ef4444;
+}
+
+.project-purple-badge {
+  background-color: #8b5cf6;
+}
+
+.project-orange-badge {
+  background-color: #f97316;
+}
+
+.project-teal-badge {
+  background-color: #14b8a6;
+}
+
+.project-indigo-badge {
+  background-color: #6366f1;
+}
+
+/* Project Card Footer */
+.project-card-footer {
+  padding: 15px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-card-footer {
+  color: #4a6cf7;
+}
+
+.project-blue:hover .project-card-footer {
+  color: #4a6cf7;
+}
+
+.project-green:hover .project-card-footer {
+  color: #10b981;
+}
+
+.project-red:hover .project-card-footer {
+  color: #ef4444;
+}
+
+.project-purple:hover .project-card-footer {
+  color: #8b5cf6;
+}
+
+.project-orange:hover .project-card-footer {
+  color: #f97316;
+}
+
+.project-teal:hover .project-card-footer {
+  color: #14b8a6;
+}
+
+.project-indigo:hover .project-card-footer {
+  color: #6366f1;
+}
+
+.project-card:hover .project-card-footer svg {
+  transform: translateX(5px);
+}
+
+.project-card-footer svg {
+  transition: transform 0.3s ease;
+}
+
+/* Modal Styles */
+.project-modal .modal-content {
+  border-radius: 15px;
+  border: none;
+  overflow: hidden;
+}
+
+.modal-header-custom {
+  border-bottom: 1px solid #e9ecef;
+  padding: 20px 30px;
+}
+
+.modal-header-custom.project-blue {
+  background-color: rgba(74, 108, 247, 0.1);
+}
+
+.modal-header-custom.project-green {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.modal-header-custom.project-red {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.modal-header-custom.project-purple {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.modal-header-custom.project-orange {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+.modal-header-custom.project-teal {
+  background-color: rgba(20, 184, 166, 0.1);
+}
+
+.modal-header-custom.project-indigo {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.project-modal .modal-title {
+  font-weight: 700;
+  color: #1d2a4d;
+}
+
+.project-modal .modal-body {
+  padding: 30px;
+}
+
+.project-modal .modal-footer {
+  border-top: 1px solid #e9ecef;
+  padding: 20px 30px;
+}
+
+.project-modal-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-icon-wrapper.project-blue {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: #4a6cf7;
+}
+
+.modal-icon-wrapper.project-green {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.modal-icon-wrapper.project-red {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.modal-icon-wrapper.project-purple {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.modal-icon-wrapper.project-orange {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+}
+
+.modal-icon-wrapper.project-teal {
+  background-color: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+
+.modal-icon-wrapper.project-indigo {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+/* Button color variations */
+.btn-blue {
+  background-color: #4a6cf7;
+  border-color: #4a6cf7;
+}
+
+.btn-green {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.btn-red {
+  background-color: #ef4444;
+  border-color: #ef4444;
+}
+
+.btn-purple {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.btn-orange {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+
+.btn-teal {
+  background-color: #14b8a6;
+  border-color: #14b8a6;
+}
+
+.btn-indigo {
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .featured-card .project-icon-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .project-icon-container {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+
+  .project-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
